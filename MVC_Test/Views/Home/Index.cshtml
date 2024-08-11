@@ -1,0 +1,222 @@
+﻿@model ObjReturn
+
+@using MVC_Test.Interfaces
+@using MVC_Test.Services
+
+
+@inject ISingleton Singleton
+@inject IScoped Scoped
+@inject ITransient Transient
+@inject HomeService HomeService
+
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+
+
+@* <div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
+
+
+
+<table class="table table-bordered" style="text-align:center">
+
+    <thead>
+        <tr>
+            <th scope="col">DI</th>
+            <th scope="col">Layer</th>
+            <th scope="col">Count</th>
+            <th scope="col">HashValue</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td rowspan="2" style="vertical-align:middle;">Singleton</td>
+            <td>Controller</td>
+            <td>@Model.Singleton.Id</td>
+            <td>@Model.Singleton.GetHashCode()</td>
+        </tr>
+
+        <tr>
+            <td>Service</td>
+            <td>@HomeService._Singleton.Id</td>
+            <td>@HomeService._Singleton.GetHashCode()</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2" style="vertical-align:middle;">Scoped</td>
+            <td>Controller</td>
+            <td>@Model.Scoped.Id</td>
+            <td>@Model.Scoped.GetHashCode()</td>
+        </tr>
+
+        <tr>
+            <td>Service</td>
+            <td>@HomeService._Scoped.Id</td>
+            <td>@HomeService._Scoped.GetHashCode()</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2" style="vertical-align:middle;">Transient</td>
+            <td>Controller</td>
+            <td>@Model.Transient.Id</td>
+            <td>@Model.Transient.GetHashCode()</td>
+        </tr>
+
+        <tr>
+            <td>Service</td>
+            <td>@HomeService._Transient.Id</td>
+            <td>@HomeService._Transient.GetHashCode()</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<h1>DemoConfig</h1>
+@ViewData["DemoUser"]
+<br />
+@ViewData["ConfigValue"]
+<br />
+@ViewData["GoogleUrl"]
+
+<br />
+<br />
+
+<h1>實作註冊會員功能(功能:新增、刪除、修改、查詢)</h1>
+<button type="button" id="BtnMemberSch" class="btn btn-primary me-2">查詢</button>
+<button type="button" id="BtnMemberAdd"  class="btn btn-success me-2"
+        data-bs-target="#EditModal" data-bs-toggle="modal">
+        新增
+ </button>
+<button type="button" id="BtnMemberEdit" class="btn btn-warning me-2">修改</button>
+<button type="button" id="BtnMemberDel" class="btn btn-danger me-2">刪除</button>
+<button type="button" id="BtnTest" class="btn btn-primary me-2 d-none">Test</button>
+
+
+<!-- @*資料顯示*@ -->
+<div class="table-responsive text-nowrap">
+    <table id="Tbl_Member" class="table table-striped table-hover">
+        <thead id="Thd_Member">
+            <tr>
+                <!-- 隱藏欄位：th添加 class="d-none"  -->
+                <th data-colnm="Id" class="d-none" scope=" col">ID</th>
+                <th data-colnm="Name" scope="col">名子</th>
+                <th data-colnm="Phone" scope="col">手機號碼</th>
+                <th data-colnm="Tel" scope="col">市內電話</th>
+                <th data-colnm="Gender" scope="col">性別</th>
+                <th data-colnm="Birthday" scope="col">生日</th>
+            </tr>
+        </thead>
+
+        <tbody id="Tbd_Member"></tbody>
+    </table>
+</div>
+
+
+
+<!-- @* 彈出的編輯表單*@ -->
+<div class="modal fade" id="EditModal" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="LB_title">會員資料-XX</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body container">
+                <div class="row mb-2">
+                    <form id="EditForm">
+                        <div class="col-12 mb-2 d-none">
+                            <div class="input-group">
+                                <span class="w-25 form-lable fs-5 p-1 text-dark text-center bg-success bg-opacity-50 fw-bold">
+                                    ID
+                                </span>
+                                <input data-colnm="Id" class="form-control ms-1" type="text" maxlength="60">
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-2">
+                            <div class="input-group">
+                                <span class="w-25 form-lable fs-5 p-1 text-dark text-center bg-success bg-opacity-50 fw-bold">
+                                    姓名
+                                </span>
+                                <input data-colnm="Name" class="Need form-control ms-1" placeholder="請輸入[姓名]" type="text" maxlength="60">
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-2">
+                            <div class="input-group">
+                                <span class="w-25 form-lable fs-5 p-1 text-dark text-center bg-success bg-opacity-50 fw-bold">
+                                    手機號碼
+                                </span>
+                                <input data-colnm="Phone" class="Need form-control ms-1" placeholder="請輸入[手機號碼]" type="text" maxlength="20">
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-2">
+                            <div class="input-group">
+                                <span class="w-25 form-lable fs-5 p-1 text-dark text-center bg-success bg-opacity-50 fw-bold">
+                                    市內電話
+                                </span>
+                                <input data-colnm="Tel" class="Need form-control ms-1" placeholder="請輸入[市內電話]" type="text" maxlength="10">
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-2">
+                            <div class="input-group">
+                                <span class="w-25 form-lable fs-5 p-1 text-dark text-center bg-success bg-opacity-50 fw-bold">
+                                    性別
+                                </span>
+                                <select data-colnm="Gender" class="Need form-select ms-1">
+                                    <option value="1">男</option>
+                                    <option value="0">女</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-2">
+                            <div class="input-group">
+                                <span class="Need w-25 form-lable fs-5 p-1 text-dark text-center bg-success bg-opacity-50 fw-bold">
+                                    生日
+                                </span>
+                                <input data-colnm="Birthday" type="date" class="Need form-control ms-1">
+                            </div>
+                        </div>
+
+                    </form>
+                    
+                </div>
+            </div>
+
+
+            <div class="modal-footer" >
+                <button id="BtnCancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    取消
+                </button>
+
+                <button id="BtnEditCfm" type="button" class="btn btn-primary">
+                    確認
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div> 
+
+
+<script src="~/js/SubJs.js" asp-append-version="true"></script>
+<script src="~/js/Member.js" asp-append-version="true"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

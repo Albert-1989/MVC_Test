@@ -1,0 +1,39 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#Loading {
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    z-index: 9999;
+}
+
+/* 表格左右置中+不換行 */
+table {
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* 選到的tr */
+tbody tr.Active {
+    background-color: rgb(204, 236, 255);
+}
+
+
