@@ -458,3 +458,5 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+MVC_Test/obj/Debug/net6.0/MVC_Test.AssemblyInfo.cs
+MVC_Test/obj/Debug/net6.0/MVC_Test.AssemblyInfoInputs.cache
