@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\\u5C08\u6848\\MVC_Test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00783267-732F-4904-88AA-05D715F32680}|MVC_Test\\MVC_Test.csproj|c:\\users\\user\\desktop\\\u5C08\u6848\\mvc_test\\mvc_test\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00783267-732F-4904-88AA-05D715F32680}|MVC_Test\\MVC_Test.csproj|solutionrelative:mvc_test\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{00783267-732F-4904-88AA-05D715F32680}|MVC_Test\\MVC_Test.csproj|c:\\users\\user\\desktop\\\u5C08\u6848\\mvc_test\\mvc_test\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{00783267-732F-4904-88AA-05D715F32680}|MVC_Test\\MVC_Test.csproj|solutionrelative:mvc_test\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -17,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{00783267-732F-4904-88AA-05D715F32680}|MVC_Test\\MVC_Test.csproj|c:\\users\\user\\desktop\\\u5C08\u6848\\mvc_test\\mvc_test\\wwwroot\\js\\member.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{00783267-732F-4904-88AA-05D715F32680}|MVC_Test\\MVC_Test.csproj|solutionrelative:mvc_test\\wwwroot\\js\\member.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00783267-732F-4904-88AA-05D715F32680}|MVC_Test\\MVC_Test.csproj|c:\\users\\user\\desktop\\\u5C08\u6848\\mvc_test\\mvc_test\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00783267-732F-4904-88AA-05D715F32680}|MVC_Test\\MVC_Test.csproj|solutionrelative:mvc_test\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00783267-732F-4904-88AA-05D715F32680}|MVC_Test\\MVC_Test.csproj|c:\\users\\user\\desktop\\\u5C08\u6848\\mvc_test\\mvc_test\\wwwroot\\js\\subjs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -50,47 +50,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Member.js",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\\u5C08\u6848\\MVC_Test\\MVC_Test\\wwwroot\\js\\Member.js",
               "RelativeDocumentMoniker": "MVC_Test\\wwwroot\\js\\Member.js",
               "ToolTip": "C:\\Users\\USER\\Desktop\\\u5C08\u6848\\MVC_Test\\MVC_Test\\wwwroot\\js\\Member.js",
               "RelativeToolTip": "MVC_Test\\wwwroot\\js\\Member.js",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAuwJ8AAAAAAAAA",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAcwJ8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-08-10T22:51:13.593Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\\u5C08\u6848\\MVC_Test\\MVC_Test\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MVC_Test\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\USER\\Desktop\\\u5C08\u6848\\MVC_Test\\MVC_Test\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "MVC_Test\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGgAAAAxAAAA",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAANgAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T17:28:21.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T17:28:21.578Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\\u5C08\u6848\\MVC_Test\\MVC_Test\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MVC_Test\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\\u5C08\u6848\\MVC_Test\\MVC_Test\\Controllers\\HomeController.cs",
               "RelativeToolTip": "MVC_Test\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAgwGoAAAANAAAA",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAwwIUAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T17:34:18.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T17:34:18.745Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "MVC_Test\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T14:01:52.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T14:01:52.192Z"
             },
             {
               "$type": "Document",
@@ -115,8 +111,7 @@
               "RelativeToolTip": "MVC_Test\\Models\\Member.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T08:22:24.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T08:22:24.316Z"
             },
             {
               "$type": "Document",
@@ -128,18 +123,17 @@
               "RelativeToolTip": "MVC_Test\\Models\\Sample.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T14:40:11.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T14:40:11.881Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\\u5C08\u6848\\MVC_Test\\MVC_Test\\appsettings.json",
               "RelativeDocumentMoniker": "MVC_Test\\appsettings.json",
               "ToolTip": "C:\\Users\\USER\\Desktop\\\u5C08\u6848\\MVC_Test\\MVC_Test\\appsettings.json",
               "RelativeToolTip": "MVC_Test\\appsettings.json",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAATAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-08-09T02:32:56.627Z",
               "EditorCaption": ""
@@ -154,8 +148,7 @@
               "RelativeToolTip": "MVC_Test\\wwwroot\\js\\SubJs.js",
               "ViewState": "AQIAAHMAAAAAAAAAAAAewH0AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-08-10T23:22:06.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T23:22:06.308Z"
             },
             {
               "$type": "Document",
