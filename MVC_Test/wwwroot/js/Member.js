@@ -116,8 +116,8 @@ async function EditCfm() {
 //新增/編輯 資料防呆
 function InputDataChk(FormID) {
     //有設定 Need Class 的欄位，必須有值
-    let Inps = document.querySelectorAll("#" + FormID + " .Need[data-colnm]");
-    console.log(Inps);
+    let Inps = document.querySelectorAll(`#${FormID} .Need[data-colnm]`);
+    //console.log(Inps);
 
     for (let i = 0; i < Inps.length; i++) {
         let Inp = Inps[i];

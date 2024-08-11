@@ -89,7 +89,7 @@ namespace MVC_Test.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<ActionResult> GetMemberData()
+        public async Task<IActionResult> GetMemberData()
         {
             ExecResult<Member> result = new()
             {
@@ -122,7 +122,7 @@ namespace MVC_Test.Controllers
         /// <returns></returns>
 
         [HttpPost]
-        public async Task<ActionResult> EditMemberData([FromBody] EditData<Member> EditData)
+        public async Task<IActionResult> EditMemberData([FromBody] EditData<Member> EditData)
         {
             
             ExecResult<Member> result = new()
