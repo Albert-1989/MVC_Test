@@ -97,7 +97,7 @@ namespace MVC_Test.Controllers
             };
 
 
-            string connStr = _configuration.GetValue<string>("ConnectionString");
+            string connStr = _configuration.GetValue<string>("MyDataBase");
             string SQLCmd = "Select * From [Member]With(NoLock)";
 
             try
@@ -131,7 +131,7 @@ namespace MVC_Test.Controllers
             };
 
 
-            string connStr = _configuration.GetValue<string>("ConnectionString");
+            string connStr = _configuration.GetValue<string>("MyDataBase");
             string SQLCmd = "";
 
             if (EditData.OPType == "新增")
