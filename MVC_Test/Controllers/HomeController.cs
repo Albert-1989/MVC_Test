@@ -96,11 +96,8 @@ namespace MVC_Test.Controllers
                 Msg = "OK"
             };
 
-            //LAPTOP-1CB11OT4\\SQLSERVER01
-            string connStr =
-                "Data Source=Albert\\MYSQLSERVER;Initial Catalog=MyDb;" +
-                "Persist Security Info=True;User ID=sa;Password=123";
 
+            string connStr = _configuration.GetValue<string>("ConnectionString");
             string SQLCmd = "Select * From [Member]With(NoLock)";
 
             try
@@ -133,11 +130,8 @@ namespace MVC_Test.Controllers
                 Msg = "OK"
             };
 
-            //LAPTOP-1CB11OT4\\SQLSERVER01
-            string connStr =
-                "Data Source=Albert\\MYSQLSERVER;Initial Catalog=MyDb;" +
-                "Persist Security Info=True;User ID=sa;Password=123";
 
+            string connStr = _configuration.GetValue<string>("ConnectionString");
             string SQLCmd = "";
 
             if (EditData.OPType == "新增")
