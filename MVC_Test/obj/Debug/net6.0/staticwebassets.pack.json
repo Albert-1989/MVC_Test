@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\js\\SubJs.js"
     },
     {
+      "Id": "C:\\Users\\USER\\Desktop\\專案\\MVC_Test\\MVC_Test\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
       "Id": "C:\\Users\\USER\\Desktop\\專案\\MVC_Test\\MVC_Test\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

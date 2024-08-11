@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LZZ/vkldsBXj45J1QJGPdlBGluo3rPeF8B+Uh/GJw/M=",
+  "Hash": "bO9TopHwIrIGo+nLrlTi8mKqzTUfjgeGvVvmCAx2ZmU=",
   "Source": "MVC_Test",
   "BasePath": "_content/MVC_Test",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Member.js"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\Desktop\\專案\\MVC_Test\\MVC_Test\\wwwroot\\js\\site.js",
+      "SourceId": "MVC_Test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\專案\\MVC_Test\\MVC_Test\\wwwroot\\",
+      "BasePath": "_content/MVC_Test",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
       "Identity": "C:\\Users\\USER\\Desktop\\專案\\MVC_Test\\MVC_Test\\wwwroot\\js\\SubJs.js",
