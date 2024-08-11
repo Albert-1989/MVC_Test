@@ -1,31 +1,14 @@
 ﻿@model ObjReturn
 
-@using MVC_Test.Interfaces
-@using MVC_Test.Services
-
-
 @inject ISingleton Singleton
 @inject IScoped Scoped
 @inject ITransient Transient
 @inject HomeService HomeService
 
 
-
 @{
     ViewData["Title"] = "Home Page";
 }
-
-
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="~/css/site.css">
-</head>
-
-
-@* <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div> *@
 
 
 
@@ -217,7 +200,12 @@
 </div> 
 
 
-<script src="~/js/SubJs.js" asp-append-version="true"></script>
-<script src="~/js/Member.js" asp-append-version="true"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+@section Scripts
+{
+    <script src="~/js/SubJs.js" asp-append-version="true"></script>
+    <script src="~/js/Member.js" asp-append-version="true"></script>
+}
+
+
+
