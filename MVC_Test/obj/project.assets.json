@@ -549,19 +549,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USER\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\專案\\MVC_Test\\MVC_Test\\MVC_Test.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\德義履歷\\題目練習\\NetCore練習\\MVC_Test\\MVC_Test\\MVC_Test.csproj",
       "projectName": "MVC_Test",
-      "projectPath": "C:\\Users\\USER\\Desktop\\專案\\MVC_Test\\MVC_Test\\MVC_Test.csproj",
-      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\專案\\MVC_Test\\MVC_Test\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\德義履歷\\題目練習\\NetCore練習\\MVC_Test\\MVC_Test\\MVC_Test.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\德義履歷\\題目練習\\NetCore練習\\MVC_Test\\MVC_Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -625,7 +625,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

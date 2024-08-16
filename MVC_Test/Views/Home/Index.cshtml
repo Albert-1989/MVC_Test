@@ -86,7 +86,7 @@
  </button>
 <button type="button" id="BtnMemberEdit" class="btn btn-warning me-2">修改</button>
 <button type="button" id="BtnMemberDel" class="btn btn-danger me-2">刪除</button>
-<button type="button" id="BtnTest" class="btn btn-primary me-2">Test</button>
+<button type="button" id="BtnTest" class="btn btn-primary me-2 d-none">Test</button>
 
 
 <!-- @*資料顯示*@ -->
@@ -95,7 +95,7 @@
         <thead id="Thd_Member">
             <tr>
                 <!-- 隱藏欄位：th添加 class="d-none"  -->
-                <th data-colnm="Id" class="d-none" scope=" col">ID</th>
+                <th data-colnm="Id" scope="col" class="d-none">Id</th>
                 <th data-colnm="Name" scope="col">名子</th>
                 <th data-colnm="Phone" scope="col">手機號碼</th>
                 <th data-colnm="Tel" scope="col">市內電話</th>
@@ -172,7 +172,7 @@
 
                         <div class="col-12 mb-2">
                             <div class="input-group">
-                                <span class="Need w-25 form-lable fs-5 p-1 text-dark text-center bg-success bg-opacity-50 fw-bold">
+                                <span class="w-25 form-lable fs-5 p-1 text-dark text-center bg-success bg-opacity-50 fw-bold">
                                     生日
                                 </span>
                                 <input data-colnm="Birthday" type="date" class="Need form-control ms-1">

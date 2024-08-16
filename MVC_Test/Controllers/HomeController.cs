@@ -1,15 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+﻿using Dapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using MVC_Test.Interfaces;
 using MVC_Test.Models;
-using System.Diagnostics;
 using Newtonsoft.Json;
-using System.Data;
 using System.Data.SqlClient;
-using Dapper;
-using System.Collections.Generic;
-using System.Data.Common;
+using System.Diagnostics;
+using System.Numerics;
 using System.Xml.Linq;
 
 
@@ -25,14 +22,20 @@ namespace MVC_Test.Controllers
         public readonly ITransient? _Transient;
 
         private readonly IConfiguration _configuration;
+        private readonly IOptions<DemoUserOption> _info;
 
-        public HomeController(ILogger<HomeController> logger, ISingleton singleton, IScoped scoped, ITransient transient, IConfiguration configuration)
+        public HomeController(
+            ILogger<HomeController> logger, ISingleton singleton, 
+            IScoped scoped, ITransient transient, IConfiguration configuration, 
+            IOptions<DemoUserOption> info
+            )
         {
             _logger = logger;
             _Singleton = singleton;
             _Scoped = scoped;
             _Transient = transient;
             _configuration = configuration;
+            _info = info;
         }
 
         public IActionResult Index()
@@ -41,8 +44,15 @@ namespace MVC_Test.Controllers
             {
                 Singleton = _Singleton,
                 Scoped = _Scoped,
-                Transient  = _Transient
+                Transient = _Transient
             };
+
+            //又一種寫法
+            var builder = new ConfigurationBuilder()
+              .SetBasePath(Directory.GetCurrentDirectory())
+              .AddJsonFile("appsettings.json");
+            var config = builder.Build();
+
 
             var DemoUser = _configuration.GetSection("DemoUser");
             var PhoneNumber = DemoUser.GetSection("PhoneNumber");
@@ -59,7 +69,19 @@ namespace MVC_Test.Controllers
                 Address = DemoUser.GetValue<string>("Address"),
                 Email = DemoUser.GetValue<string>("Email"),
                 Age = DemoUser.GetValue<Int32>("Age"),
-                IsActive = DemoUser.GetValue<bool>("IsActive")
+                IsActive = DemoUser.GetValue<bool>("IsActive"),
+
+                //寫法2
+                DemoUser = _info.Value,
+
+                //寫法3
+                DemoUser2 = new {
+                    Name = config["DemoUser:Name"],
+                    PhoneNumber = new {
+                        Tel = config["DemoUser:PhoneNumber:Tel"],
+                        Phone = config["DemoUser:PhoneNumber:Phone"]
+                    }
+                }
             };
             var JsonObj = JsonConvert.SerializeObject(Config);
 
@@ -112,19 +134,20 @@ namespace MVC_Test.Controllers
                 result.Msg = ex.Message;
             }
 
-            
+
             return Json(result);
         }
+
 
         /// <summary>
         /// 編輯 Member 資料
         /// </summary>
+        /// <param name="EditData">編輯的資料</param>
         /// <returns></returns>
-
         [HttpPost]
         public async Task<IActionResult> EditMemberData([FromBody] EditData<Member> EditData)
         {
-            
+
             ExecResult<Member> result = new()
             {
                 Msg = "OK"
@@ -140,7 +163,7 @@ namespace MVC_Test.Controllers
             }
             else if (EditData.OPType == "修改")
             {
-                SQLCmd = 
+                SQLCmd =
                     "Update Member Set Name = @Name, Phone = @Phone, Tel = @Tel, " +
                     "Gender = @Gender, Birthday = @Birthday " +
                     "Where Id = @ID ;";

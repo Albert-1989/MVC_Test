@@ -3,7 +3,7 @@
 namespace MVC_Test.Services
 {
 
-    public class HomeService 
+    public class HomeService
     {
         public ISingleton _Singleton { get; private set; }
         public IScoped _Scoped { get; private set; }
