@@ -47,16 +47,15 @@ namespace MVC_Test.Controllers
                 Transient = _Transient
             };
 
-            //又一種寫法
+            var DemoUser = _configuration.GetSection("DemoUser");
+            var PhoneNumber = DemoUser.GetSection("PhoneNumber");
+            var DemoUrl = _configuration.GetSection("DemoUrl");
+
+            //寫法3
             var builder = new ConfigurationBuilder()
               .SetBasePath(Directory.GetCurrentDirectory())
               .AddJsonFile("appsettings.json");
             var config = builder.Build();
-
-
-            var DemoUser = _configuration.GetSection("DemoUser");
-            var PhoneNumber = DemoUser.GetSection("PhoneNumber");
-            var DemoUrl = _configuration.GetSection("DemoUrl");
 
             var Config = new
             {
